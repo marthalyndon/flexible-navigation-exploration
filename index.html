@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Left Nav Sub-Bar Prototype</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Main Left Navigation -->
+        <nav class="left-nav">
+            <ul class="nav-items">
+                <li class="nav-item active" title="Dashboards">
+                    <span class="icon">📊</span>
+                </li>
+                <li class="nav-item" title="Analytics">
+                    <span class="icon">📈</span>
+                </li>
+                <li class="nav-item" title="Settings">
+                    <span class="icon">⚙️</span>
+                </li>
+                <li class="nav-item" title="Team">
+                    <span class="icon">👥</span>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Sub Navigation Bar -->
+        <aside class="sub-nav">
+            <div class="sub-nav-header">
+                <h3>Dashboards</h3>
+                <button class="close-btn">✕</button>
+            </div>
+            <div class="sub-nav-content">
+                <div class="starred-section">
+                    <h4 class="section-title">Starred</h4>
+                    <ul class="starred-items">
+                        <li class="sub-item" draggable="true">
+                            <span class="drag-handle">⋮⋮</span>
+                            <span class="item-label">Analytics Overview</span>
+                        </li>
+                        <li class="sub-item" draggable="true">
+                            <span class="drag-handle">⋮⋮</span>
+                            <span class="item-label">User Metrics</span>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="sub-nav-items" id="dashboardList">
+                    <li class="sub-nav-item" draggable="true">
+                        <div class="item-content">
+                            <div class="item-header">
+                                <span class="drag-handle">⋮⋮</span>
+                                <span class="label">Front End</span>
+                            </div>
+                            <ul class="sub-items expanded">
+                                <li class="sub-item" draggable="true">
+                                    <span class="drag-handle">⋮⋮</span>
+                                    <span class="item-label">User Analytics</span>
+                                </li>
+                                <li class="sub-item" draggable="true">
+                                    <span class="drag-handle">⋮⋮</span>
+                                    <span class="item-label">Performance Metrics</span>
+                                </li>
+                                <li class="sub-item" draggable="true">
+                                    <span class="drag-handle">⋮⋮</span>
+                                    <span class="item-label">Engagement Dashboard</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="sub-nav-item" draggable="true">
+                        <div class="item-content">
+                            <div class="item-header">
+                                <span class="drag-handle">⋮⋮</span>
+                                <span class="label">Back End</span>
+                            </div>
+                            <ul class="sub-items expanded">
+                                <li class="sub-item" draggable="true">
+                                    <span class="drag-handle">⋮⋮</span>
+                                    <span class="item-label">API Performance</span>
+                                </li>
+                                <li class="sub-item" draggable="true">
+                                    <span class="drag-handle">⋮⋮</span>
+                                    <span class="item-label">Database Metrics</span>
+                                </li>
+                                <li class="sub-item" draggable="true">
+                                    <span class="drag-handle">⋮⋮</span>
+                                    <span class="item-label">Server Health</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="sub-nav-item" draggable="true">
+                        <div class="item-content">
+                            <div class="item-header">
+                                <span class="drag-handle">⋮⋮</span>
+                                <span class="label">Marketing</span>
+                            </div>
+                            <ul class="sub-items expanded">
+                                <li class="sub-item" draggable="true">
+                                    <span class="drag-handle">⋮⋮</span>
+                                    <span class="item-label">Campaign Performance</span>
+                                </li>
+                                <li class="sub-item" draggable="true">
+                                    <span class="drag-handle">⋮⋮</span>
+                                    <span class="item-label">Social Media</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <div class="add-section-container">
+                    <button class="add-section-btn" id="addSectionBtn">
+                        <span class="plus-icon">+</span>
+                        <span class="btn-label">Add Section</span>
+                    </button>
+                </div>
+                <div class="section-divider"></div>
+                <ul class="sub-nav-items">
+                    <li class="sub-nav-item fixed-section">
+                        <div class="item-content">
+                            <div class="item-header">
+                                <span class="label">All Dashboards</span>
+                            </div>
+                            <ul class="sub-items expanded">
+                                <li class="sub-item" draggable="true">
+                                    <span class="drag-handle">⋮⋮</span>
+                                    <span class="item-label">Revenue Analytics</span>
+                                </li>
+                                <li class="sub-item" draggable="true">
+                                    <span class="drag-handle">⋮⋮</span>
+                                    <span class="item-label">Sales Pipeline</span>
+                                </li>
+                                <li class="sub-item" draggable="true">
+                                    <span class="drag-handle">⋮⋮</span>
+                                    <span class="item-label">Customer Success</span>
+                                </li>
+                                <li class="sub-item" draggable="true">
+                                    <span class="drag-handle">⋮⋮</span>
+                                    <span class="item-label">Product Usage</span>
+                                </li>
+                                <li class="sub-item" draggable="true">
+                                    <span class="drag-handle">⋮⋮</span>
+                                    <span class="item-label">Infrastructure Monitoring</span>
+                                </li>
+                                <li class="sub-item" draggable="true">
+                                    <span class="drag-handle">⋮⋮</span>
+                                    <span class="item-label">Security Overview</span>
+                                </li>
+                                <li class="sub-item" draggable="true">
+                                    <span class="drag-handle">⋮⋮</span>
+                                    <span class="item-label">Compliance Dashboard</span>
+                                </li>
+                                <li class="sub-item" draggable="true">
+                                    <span class="drag-handle">⋮⋮</span>
+                                    <span class="item-label">Team Performance</span>
+                                </li>
+                                <li class="sub-item" draggable="true">
+                                    <span class="drag-handle">⋮⋮</span>
+                                    <span class="item-label">Bug Tracking</span>
+                                </li>
+                                <li class="sub-item" draggable="true">
+                                    <span class="drag-handle">⋮⋮</span>
+                                    <span class="item-label">Release Management</span>
+                                </li>
+                                <li class="sub-item" draggable="true">
+                                    <span class="drag-handle">⋮⋮</span>
+                                    <span class="item-label">Cost Analysis</span>
+                                </li>
+                                <li class="sub-item" draggable="true">
+                                    <span class="drag-handle">⋮⋮</span>
+                                    <span class="item-label">Traffic Sources</span>
+                                </li>
+                                <li class="sub-item" draggable="true">
+                                    <span class="drag-handle">⋮⋮</span>
+                                    <span class="item-label">Conversion Funnel</span>
+                                </li>
+                                <li class="sub-item" draggable="true">
+                                    <span class="drag-handle">⋮⋮</span>
+                                    <span class="item-label">Email Campaigns</span>
+                                </li>
+                                <li class="sub-item" draggable="true">
+                                    <span class="drag-handle">⋮⋮</span>
+                                    <span class="item-label">Mobile App Analytics</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="content-header">
+                <h1>Left Navigation Sub-Bar Prototype</h1>
+            </header>
+            <div class="content-body">
+                <p>Click on navigation items to see the sub-bar in action.</p>
+                <div class="demo-section">
+                    <h2>Prototype Features</h2>
+                    <ul>
+                        <li>Collapsible sub-navigation</li>
+                        <li>Smooth transitions</li>
+                        <li>Responsive layout</li>
+                        <li>Modern design</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
